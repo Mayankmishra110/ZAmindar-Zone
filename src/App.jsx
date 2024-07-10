@@ -1,4 +1,6 @@
 import Layout from "./routes/layout/layout";
+import HomePage from "./routes/homePage/homePage";
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
@@ -6,6 +8,12 @@ function App() {
     {
       path: "/",
       element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <HomePage />,
+        },
+      ],
     },
   ]);
 
