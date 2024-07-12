@@ -6,7 +6,7 @@ function Chat() {
   return (
     <div className="chat">
       <div className="messages">
-        <h1>Messages</h1>
+        <h1>Chats</h1>
         <div className="message">
           <img
             src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -66,7 +66,9 @@ function Chat() {
               />
               John Doe
             </div>
-            <span className="close" onClick={()=>setChat(null)}>X</span>
+            <span className="close" onClick={() => setChat(null)}>
+              X
+            </span>
           </div>
           <div className="center">
             <div className="chatMessage">
