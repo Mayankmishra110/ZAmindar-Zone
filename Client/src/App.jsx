@@ -12,7 +12,6 @@ import {
   profilePageLoader,
   singlePageLoader,
 } from "./lib/loaders";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
