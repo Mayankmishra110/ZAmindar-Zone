@@ -2,11 +2,16 @@ import { Layout, RequireAuth } from "./routes/layout/layout";
 import HomePage from "./routes/homePage/homePage";
 import ListPage from "./routes/listPage/listPage";
 import SinglePage from "./routes/singlePage/singlePage";
+import ProfilePage from "./routes/profilePage/profilePage";
 import Login from "./routes/login/login";
 import Register from "./routes/register/register";
 import NewPostPage from "./routes/newPostPage/newPostPage";
 import ProfileUpdatePage from "./routes/profileUpdatePage/profileUpdatePage";
-import { listPageLoader, singlePageLoader } from "./lib/loaders";
+import {
+  listPageLoader,
+  profilePageLoader,
+  singlePageLoader,
+} from "./lib/loaders";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -41,6 +46,11 @@ function App() {
       path: "/",
       element: <RequireAuth />,
       children: [
+        {
+          path: "/profile",
+          element: <ProfilePage />,
+          loader: profilePageLoader,
+        },
         {
           path: "/profile/update",
           element: <ProfileUpdatePage />,
