@@ -4,6 +4,7 @@ import ListPage from "./routes/listPage/listPage";
 import SinglePage from "./routes/singlePage/singlePage";
 import Login from "./routes/login/login";
 import Register from "./routes/register/register";
+import NewPostPage from "./routes/newPostPage/newPostPage";
 import ProfileUpdatePage from "./routes/profileUpdatePage/profileUpdatePage";
 import { listPageLoader, singlePageLoader } from "./lib/loaders";
 
@@ -43,6 +44,10 @@ function App() {
         {
           path: "/profile/update",
           element: <ProfileUpdatePage />,
+        },
+        {
+          path: "/add",
+          element: <NewPostPage />,
         },
       ],
     },
